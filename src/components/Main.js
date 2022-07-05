@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
+import Nav from './Nav';
 function Main() {
   const [loading, setLoading] = useState(true)
 
@@ -31,9 +32,7 @@ function Main() {
   }, [])
   return (
     <div className="Main">
-        {loading ? <h1>Loading...</h1> : <h1>{pageInfo["per_page"]}</h1>}
-        {loading ? <h1>Loading...</h1> : <h1>{area1["total_count"]}</h1>}
-        {loading ? <h1>Loading...</h1> : <h1>{areaMore["total_count"]}</h1>}
+        {loading ? <h1>Loading...</h1> : <Nav pageData={pageInfo} />}
 
     </div>
   );
