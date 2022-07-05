@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import Nav from './Nav';
+import UnitList from './UnitList';
 function Main() {
   const [loading, setLoading] = useState(true)
 
@@ -33,6 +34,8 @@ function Main() {
   return (
     <div className="Main">
         {loading ? <h1>Loading...</h1> : <Nav pageData={pageInfo} />}
+        {loading ? <h1>Loading...</h1> : <UnitList unitData={area1} />}
+        {loading ? <h1>Loading...</h1> : <UnitList unitData={areaMore} />}
 
     </div>
   );
